@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ua.oa.taras.audio.controller.AudioShopController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <BorderPane layoutX="77.0" layoutY="71.0" prefHeight="296.0" prefWidth="485.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="table" prefHeight="165.0" prefWidth="405.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox prefHeight="103.0" prefWidth="485.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="97.0" prefWidth="197.0">
+                     <children>
+                        <TextField fx:id="idField" promptText="id">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="nameField" promptText="Name" />
+                        <TextField fx:id="yearField" promptText="year" />
+                        <Button fx:id="createButton" mnemonicParsing="false" onAction="#createAlbum" text="Create" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+                  <VBox prefHeight="110.0" prefWidth="151.0">
+                     <children>
+                        <Button fx:id="sendButton" mnemonicParsing="false" onAction="#saveToDB" text="Send">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="getButton" mnemonicParsing="false" onAction="#getFromDB" prefHeight="25.0" prefWidth="43.0" text="Get" />
+                        <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="52.0" text="Label" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
